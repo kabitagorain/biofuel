@@ -1,0 +1,7 @@
+{% autoescape off %}
+Hi {{ user.username }},
+
+Your account as <b> {{ user.get_type }} </b> has been activated! You can login now!
+
+http://{{ domain }}
+{% endautoescape %}

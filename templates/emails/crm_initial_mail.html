@@ -1,0 +1,7 @@
+{% autoescape off %}
+Hi {{ lead.lead }},
+
+Please click on the link below to confirm your registration:
+
+http://{{ domain }}{% url 'crm:unsubscrib' email=lead.email_address code=confirm_code %}
+{% endautoescape %}

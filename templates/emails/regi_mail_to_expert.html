@@ -1,0 +1,7 @@
+{% autoescape off %}
+Hi {{ user.username }},
+
+Your account as <b> {{ user.get_type }} </b> has been created wait for approval.
+
+http://{{ domain }}
+{% endautoescape %}

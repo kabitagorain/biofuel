@@ -1,0 +1,9 @@
+*.pyc  
+*~  
+__pycache__  
+gfvp_env   
+.DS_Store  
+gfvp/settings.py
+static/assets/scss
+static/assets/gulpfile.js
+static/assets/package.json
