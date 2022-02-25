@@ -25,7 +25,7 @@ def leads(request):
     null_session(request)
     #Post method event
     if request.method == "POST": 
-        print(request.POST) 
+        # print(request.POST) 
         
         
         if 'delete_lead' in request.POST:

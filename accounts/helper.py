@@ -13,7 +13,7 @@ def check_type(request, slug):
     try:
         curnt_user_type_slug = request.user.type.slug
     except Exception as e:
-        print(e)
+        
         curnt_user_type_slug = None 
      
     if curnt_user_type_slug == slug or request.user.is_staff or request.user.is_superuser:

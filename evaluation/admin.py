@@ -36,6 +36,13 @@ class LogicalStringAdmin(admin.ModelAdmin):
 admin.site.register(LogicalString, LogicalStringAdmin)
 
 
+class EvaluatorAdmin(admin.ModelAdmin):
+    
+    list_display = ('name', 'email', 'phone', 'phone', 'biofuel', 'create_date',)
+    list_filter = ('biofuel', )
+admin.site.register(Evaluator, EvaluatorAdmin)
+
+
 
 
 
@@ -43,6 +50,6 @@ admin.site.register(LogicalString, LogicalStringAdmin)
 
 admin.site.register(DifinedLabel)
 admin.site.register(Biofuel)
-admin.site.register(Evaluator)
+
 admin.site.register(Option)
 

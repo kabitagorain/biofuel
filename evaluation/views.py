@@ -84,6 +84,10 @@ def eva_index(request):
             "name":name
             }
             form = EvaluatorForm(initial = initial_dict)
+        total_ques = Question.objects.all().count()
+        box_timing = f"Depending on how many answers you provide, the self assessment will take anywhere from {round(total_ques/10)} to {round(total_ques/3)} minutes. At the end of the assessment, a PDF report will be provided, which can be retrieved via the Dashboard at a later stage."
+        
+        
         
         
         
@@ -91,6 +95,7 @@ def eva_index(request):
         context = {
         'form': form,
         'evaluator': False,
+        'box_timing': box_timing
         
         
         }
@@ -111,6 +116,11 @@ def eva_index(request):
             selected_option = ''
         eva_lebels = EvaLabel.objects.filter(evaluator = evaluator_data).order_by('sort_order')
         timing_text = f"Depending on how you are answering the questions may take {round(total_ques/6)} to {round(total_ques/2)} min."
+        
+        
+        
+        
+        
         context = {
             'question': question,
             'optns': options,
@@ -121,7 +131,8 @@ def eva_index(request):
             'acive': request.session['active'],
             'total_question': request.session['total_question'],
             'qualified_rang' : 2,
-            'timing_text': timing_text
+            'timing_text': timing_text,
+            
             
 
         }

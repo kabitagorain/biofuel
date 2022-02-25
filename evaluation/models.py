@@ -102,7 +102,7 @@ class Evaluator(models.Model):
     phone = models.CharField(max_length=16)
     orgonization = models.CharField(max_length=252)
     biofuel = models.ForeignKey(Biofuel, on_delete=models.SET_NULL, null=True, blank=True)
-    create_date = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+    create_date = models.DateTimeField(auto_now_add=True, null=True, blank=True, editable=True)
     report_genarated = models.BooleanField(default=False)
     
 

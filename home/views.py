@@ -68,7 +68,7 @@ def dashboard(request):
     day_of_week = [key.split(': ') for key, value in weeks_results(request).items()]
     total_of_day = [value for key, value in weeks_results(request).items()]
     
-    print(typewise_user(request))
+    # print(typewise_user(request))
     
     
     
