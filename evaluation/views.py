@@ -289,7 +289,7 @@ def option_append(request):
 
     except Exception as e:
         
-        qualified_ans_rang = 2
+        qualified_ans_rang = 0
         '''if no next question found and sumited ans blw rang will not genarate report'''        
         if request.session['total_question'] < int(qualified_ans_rang):            
             messages.warning(request, 'Need to submit minimum '+ str(qualified_ans_rang) + ' qualified answer! Current is ' + str(request.session['total_question']) + '!')
