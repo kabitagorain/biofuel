@@ -130,7 +130,7 @@ def eva_index(request):
             'selected_option': selected_option,
             'acive': request.session['active'],
             'total_question': request.session['total_question'],
-            'qualified_rang' : 2,
+            'qualified_rang' : 0,
             'timing_text': timing_text,
             
             
